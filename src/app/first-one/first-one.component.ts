@@ -8,19 +8,17 @@ import { Component, OnInit } from '@angular/core';
 export class FirstOneComponent implements OnInit {
 
   isAuth = false;
-  lastUpdate: any;
+  lastUpdate =  new Promise<Date>((resolve, reject) => {
+    const date = new Date();
+    setTimeout(
+      () => {
+        resolve(date);
+      }, 2000
+    );
+  });
   appareils: any[] = [];
 
   constructor() {
-
-    this.lastUpdate =  new Promise((resolve, reject) => {
-      const date = new Date();
-      setTimeout(
-        () => {
-          resolve(date);
-        }, 2000
-      );
-    });
 
     this.appareils.push({name : 'Machine à laver', status : true});
     this.appareils.push({name : 'Ordinateur', status : false});
