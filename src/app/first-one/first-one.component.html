@@ -3,12 +3,12 @@
     <div class="col-xs-12">
       <h2>Mes Appareils :</h2>
       <ul class="list-group">
-        <app-appareil></app-appareil>
-        <app-appareil></app-appareil>
-        <app-appareil></app-appareil>
-        <app-appareil></app-appareil>
+        <app-appareil [appareilName] = "appareils[0][0]" [appareilAllumer]="appareils[0][1]"></app-appareil>
+        <app-appareil [appareilName] = "appareils[1][0]" [appareilAllumer]="appareils[1][1]"></app-appareil>
+        <app-appareil [appareilName] = "appareils[2][0]" [appareilAllumer]="appareils[2][1]"></app-appareil>
+        <app-appareil [appareilName] = "appareils[3][0]" [appareilAllumer]="appareils[3][1]"></app-appareil>
       </ul>
-      <button class="btn btn-success" 
+      <button class="btn btn-success"
       [disabled]="!isAuth"
       (click)="onAllumer()">Tout allumer</button>
     </div>

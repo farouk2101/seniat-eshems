@@ -9,7 +9,14 @@ export class FirstOneComponent implements OnInit {
 
   isAuth = false;
 
+  appareils: any[] = [];
+
   constructor() {
+    this.appareils[0] = ['Machine à laver', true];
+    this.appareils[1] = ['Ordinateur', false];
+    this.appareils[2] = ['Lave vaisselle', false];
+    this.appareils[3] = ['Télévision', true];
+
     setTimeout(
       () => {
         this.isAuth = true;
@@ -17,7 +24,7 @@ export class FirstOneComponent implements OnInit {
   }
 
   onAllumer(){
-    console.log('Tout allumer !')
+    console.log('Tout allumer !');
   }
 
   ngOnInit(): void {
