@@ -12,10 +12,10 @@ export class FirstOneComponent implements OnInit {
   appareils: any[] = [];
 
   constructor() {
-    this.appareils[0] = ['Machine à laver', true];
-    this.appareils[1] = ['Ordinateur', false];
-    this.appareils[2] = ['Lave vaisselle', false];
-    this.appareils[3] = ['Télévision', true];
+    this.appareils.push({name : 'Machine à laver', status : true});
+    this.appareils.push({name : 'Ordinateur', status : false});
+    this.appareils.push({name : 'Lave vaisselle', status : false});
+    this.appareils.push({name : 'Télévision', status : true});
 
     setTimeout(
       () => {
